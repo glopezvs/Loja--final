@@ -1,0 +1,13 @@
+@mixin flex_column(){
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex_row(){
+    display: flex;
+    flex-direction: row;
+}
+@mixin page_title(){
+    font-weight: 100;
+    margin: 50px 0 15px 0;
+    text-align: center;
+}
