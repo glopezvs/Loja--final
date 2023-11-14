@@ -2,7 +2,9 @@
 @import "../components/font";
 @import "../components/buttons";
 
-h2{@include page_title}
+h2{text-align: center;
+font-weight: 100;
+padding-top: 15px;}
 
 
 //---------------------NAVBAR---------------------//
@@ -14,7 +16,7 @@ h2{@include page_title}
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    
+
     .logo__img{
         background-color: red($color: #000000);
         width: 100px;
@@ -38,21 +40,27 @@ h2{@include page_title}
 
 
 
-
-.first__page-details{
-    @include flex_column;
-    align-items: flex-start;
+.first__page {
+    .first__page-details{
     position: absolute;
     transform: translate(20vh, 15vh);
     .first__page-title{
         color: $white;
         font-weight: 100;
+    }   
     }
-    
+
 }
 
+.header__img{
+   img{
+    object-fit: cover;
+    min-height: 100vh;
+    width: 100%;
 
-
+ 
+}
+}
 
 
 //---------------------ICON TEXT PAGE---------------------//
@@ -63,6 +71,7 @@ h2{@include page_title}
 .third__page-wrapper{
     background: $primary_color;
     padding: 64px 0;
+    margin-top: 50px;
     .icon__details{
         display: flex;
         gap: 10px;
@@ -85,8 +94,8 @@ h2{@include page_title}
 
 
  .rect__img{       
-        width: 200px;
-        height: 350px;
+        width: 250px;
+        height: 450px;
         object-fit: cover;
     }
 
@@ -139,16 +148,19 @@ h2{@include page_title}
 //---------------------CAROUSEL PAGE---------------------//
 
 .carousel__wrapper{
+   
     img{
         width: 300px;
         height: 300px;
+        padding-right: 5px;
     }
     .overflow{
-        width:60vw;
+        padding-top: 20px;
+        margin-left: 20px;
         overflow-x: scroll;
         overflow-y: hidden;
         white-space: nowrap;
-        -ms-overflow-style: none;  /* IE and Edge */
+        -ms-overflow-style: none; 
         scrollbar-width: none; 
     }
     .overflow::-webkit-scrollbar {

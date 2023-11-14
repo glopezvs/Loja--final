@@ -432,12 +432,29 @@ template {
   background-color: rgb(247, 238, 227);
 }
 
+.product__title {
+  padding: 5px;
+}
+
 .product__row img {
   width: 100%;
 }
+.product__row .product__details--products {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  gap: 8px;
+}
+.product__row .product__details--products span:first-child {
+  font-weight: bold;
+}
+.product__row .product__details--products span:nth-child(2) {
+  color: rgb(172, 170, 170);
+  font-size: 14px;
+}
 
-.btn {
-  padding-top: 50px;
+.btn__more {
+  padding: 40px 0;
 }
 
 .btn {
@@ -455,9 +472,9 @@ template {
 }
 
 h2 {
-  font-weight: 100;
-  margin: 50px 0 15px 0;
   text-align: center;
+  font-weight: 100;
+  padding-top: 15px;
 }
 
 .navbar {
@@ -479,21 +496,26 @@ h2 {
   gap: 5px;
 }
 
-.first__page-details {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.first__page .first__page-details {
   position: absolute;
   transform: translate(20vh, 15vh);
 }
-.first__page-details .first__page-title {
+.first__page .first__page-details .first__page-title {
   color: rgb(243, 242, 242);
   font-weight: 100;
+}
+
+.header__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .third__page-wrapper {
   background: rgb(247, 238, 227);
   padding: 64px 0;
+  margin-top: 50px;
 }
 .third__page-wrapper .icon__details {
   display: flex;
@@ -507,8 +529,8 @@ h2 {
 }
 
 .rect__img {
-  width: 200px;
-  height: 350px;
+  width: 250px;
+  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -548,13 +570,15 @@ h2 {
 .carousel__wrapper img {
   width: 300px;
   height: 300px;
+  padding-right: 5px;
 }
 .carousel__wrapper .overflow {
-  width: 60vw;
+  padding-top: 20px;
+  margin-left: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  -ms-overflow-style: none; /* IE and Edge */
+  -ms-overflow-style: none;
   scrollbar-width: none;
 }
 .carousel__wrapper .overflow::-webkit-scrollbar {
@@ -637,4 +661,14 @@ h2 {
   color: rgb(243, 242, 242);
   font-size: 12px;
   font-weight: 100;
+}
+
+@media (max-width: 768px) {
+  .first__page .first__page-details {
+    transform: translate(0, 0);
+    top: 250;
+  }
+  .first__page .first__page-details .first__page-title {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=sass.css.map */
